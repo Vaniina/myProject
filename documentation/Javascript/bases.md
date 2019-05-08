@@ -417,3 +417,22 @@ Et ainsi en:
 [7,12,15]
     .filter((element) => element > 10);
 ```
+
+
+---
+
+
+## Boucle for
+
+L'instruction **for** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
+
+L'instruction **for** qui suit débute en déclarant la variable **i** et en l'initialisant à 0. Elle vérifie que **i** est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente **i** de 1, ce qui sera fait à chaque passage dans la boucle.
+
+```js
+for (let i = 0; i < 9; i++) {
+   console.log(i);
+}
+```
+
+
+---
