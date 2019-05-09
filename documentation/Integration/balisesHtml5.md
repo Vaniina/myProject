@@ -1,41 +1,41 @@
 # Les balises HTML5
 
-## `<Section/>`
+## `<section/>`
 
 C'est un groupe de contenu thématique (comme `div`) permettant de découper la page.
 
 ---
 
-## `<Article/>`
+## `<article/>`
 
 C'est un contenu indépendant qui peut être extrait de la page, comme chaque bloc de tweet sur Twitter.
 
 ---
 
-## `<Nav/>`
+## `<nav/>`
 
 C'est un élément qui permet de cibler un  groupe de liens (par exemple un menu de navigation).
 
 ---
 
-## `<Aside/>`
+## `<aside/>`
 
 C'est un élément se trouvant à côté d'un autre élément (par exemple la colonne d'un menu).
 
 ---
 
-## `<Main/>`
+## `<main/>`
 
 C'est l'élément qui permet d'englober le contenu principal du site. 
 
 ---
 
-## `<Header/>`
+## `<header/>`
 
 C'est une en tête de page.
 
 ---
 
-## `<Footer/>`
+## `<footer/>`
 
 C'est un pied de page.
