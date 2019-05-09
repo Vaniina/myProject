@@ -20,7 +20,7 @@ Cette documentation va reprendre les bases, à savoir :
 Pour commencer, il faut savoir qu'en javascript il y a différents types de données.
 Celles-ci permettent de stocker les différentes structures et gagner en confort.
 
-On peut dés à présent les citer les principaux:
+On peut dès à présent en citer les principales:
 
 - [Boolean](#boolean)
 - [String](#string)
@@ -28,15 +28,15 @@ On peut dés à présent les citer les principaux:
 - [Object](#object)
 - [Array](#array)
 
-Il est important de noter que chaqu'un de ces types a son propre intérêt et peuvent donner accès à différentes méthodes internes.
+Il est important de noter que chacun de ces types a son propre intérêt et ils peuvent donner accès à différentes méthodes internes.
 
 #### Boolean
 
-Un boolean est représenté par `true` ou `false`, ils permettent de dire si quelque chose à un état spécifique.
+Un boolean est représenté par `true` ou `false`, ils permettent de dire si quelque chose a un état spécifique.
 Par exemple, spécifier si une fonctionnalité est active.
 
 
-Il y a différentes façon de générer un boolean, une liste non exaustive:
+Il y a différentes façon de générer un boolean, une liste non exhaustive:
 
 ```js
 // En dure
@@ -62,7 +62,7 @@ const monTexte = 'Coucou toi';
 const monTexte = `Coucou toi`;
 ```
 
-Celle-ci donnent accès à pleins de méthodes liées au traitement de texte, disponibles directement sur ceux-ci, notons les principaux : `length`, `toUpperCase`, `toLowerCase`, `charAt`, `substr`, `indexOf`, `substring`, `split`, `trim`, ...
+Celles-ci donnent accès à pleins de méthodes liées au traitement de texte, disponibles directement sur ceux-ci, notons les principaux : `length`, `toUpperCase`, `toLowerCase`, `charAt`, `substr`, `indexOf`, `substring`, `split`, `trim`, ...
 
 ```js
 const monTexte = '  Coucou   ';
@@ -96,7 +96,7 @@ result; // <- 'Coucou toi, Tu vas bien ?'
 
 #### Number
 
-Les nombres, permettent essenciellement à faire des calculs: addition, soustraction, multiplication, ...
+Les nombres, permettent essentiellement à faire des calculs: addition, soustraction, multiplication, ...
 
 ```js
 const count = 22;
@@ -120,7 +120,7 @@ result; // '22.50' <- résultat converti en string
 
 #### Object
 
-Les objets permettent de stocker des structures plus complexes pour un besoin métier spécifique.
+Les objets permettent de stocker des structures plus complexes pour un besoin spécifique.
 Ils peuvent être définis en format JSON, ou de façon plus dynamique.
 
 ```js
@@ -141,7 +141,7 @@ car.seats; // accès à la donnée 'seats' dans 'car'.
 car["luggages"]; // accès à la donnée 'luggages' dans 'car'.
 ```
 
-Nous devons enchainer les propriétés pour accéder à des niveaux plus bas :
+Nous devons enchaîner les propriétés pour accéder à des niveaux plus bas :
 
 ```js
 car.extras.color; // accès à 'color' dans 'extras' dans 'car
@@ -151,7 +151,7 @@ car.extras.color; // accès à 'color' dans 'extras' dans 'car
 
 #### Array
 
-Les `array`, ou *tableaux*, permettent de stocker des listes d'information.
+Les `array`, ou *tableaux*, permettent de stocker des listes d'informations.
 
 ```js
 const children = ["John", "Anna", "Vince"];
@@ -169,14 +169,14 @@ children[2]; // <- "Vince"
 children[3]; // <- undefined
 ```
 
-La force des array, est de pouvoir manipuler des listes, enlever/ajouter des éléments, les classés par rapport à un filtre et pas mal d'autres informations.
+La force des array, est de pouvoir manipuler des listes, enlever/ajouter des éléments, les classer par rapport à un filtre et pas mal d'autres informations.
 Nous noterons les fonctionnalités principales : `.length`, `.push()`, `.indexOf`, `.splice()`, `.sort()`, `.map()`, `.join()`, `.find()`, `.findIndex()`, `.filter()`, `.forEach()`.
 
 ---
 
 ## Les opérateurs
 
-Les différents opérateurs de mathématique sont disponibles pour effectuer des calcules plus ou moins complexes :
+Les différents opérateurs mathématiques sont disponibles pour effectuer des calcules plus ou moins complexes :
 
 - `+` Additioner des nombres, **ou assembler des strings ensembles**.
 - `-` Soustraction de nombres.
@@ -189,7 +189,7 @@ Les différents opérateurs de mathématique sont disponibles pour effectuer des
 
 ## Les comparaisons
 
-Les opérateurs de comparaison permettent d'executer du code dans un cas précis.
+Les opérateurs de comparaison permettent d'éxecuter du code dans un cas précis.
 Ils sont souvent utilisés dans les conditions `if()` ou dans des fonctions pour trouver des éléments, par exemple: `array.find()`, `array.filter()`
 
 - `a === b` Est égale.
@@ -213,7 +213,7 @@ if (name === "John" && age > 30) {
 }
 ```
 
-Il exeiste aussi l'opérateur ternaire qui permet de faire des conditions sur une seule ligne:
+Il existe aussi l'opérateur ternaire qui permet de faire des conditions sur une seule ligne:
 
 ```js
 const message = (sexe === "male") ? "Une bière ?" : "Un rosé ?";
@@ -233,7 +233,7 @@ Il existe 2 types de variables :
 
 #### Création de la variable
 
-Pour créer une variable, il suffit d'utiliser le mot clé magique ci-dessus est de donner à nombre à notre variable, et de lui assigner une valeur avec le symbole `=`.
+Pour créer une variable, il suffit d'utiliser le mot clé magique ci-dessus est de donner un nombre à notre variable, et de lui assigner une valeur avec le symbole `=`.
 
 ```js
 let user = "Vince";
@@ -248,7 +248,7 @@ let name;
 
 #### Changer sa valeur
 
-Une fois la variable créée, on peut modifier sa valeur à tout moment (uniquement si ce n'est pas une constante), toujours avec le symbole `=`, mais cette fois sans utiliser `let`.
+Une fois la variable créé, on peut modifier sa valeur à tout moment (uniquement si ce n'est pas une constante), toujours avec le symbole `=`, mais cette fois sans utiliser `let`.
 
 ```js
 let user = "John";
@@ -327,7 +327,7 @@ bonjour("John"); // <- "Coucou John"
 bonjour("Anna"); // <- "Coucou Anna"
 ```
 
-#### Envoie de plusieurs paramètre
+#### Envoie de plusieurs paramètres
 
 Si l'on souhaite envoyer plusieurs paramètres à la fonction, il suffit d'ajouter dans les parenthèses la liste des variables qu'on souhaite envoyer, séparés par des virgules.
 
@@ -347,7 +347,7 @@ bonjour("Louise", 22); // <- "Coucou Louise, tu as 22 ans"
 
 #### Paramètres non utilisés
 
-Dans le cas où la fonction possède des paramètres non-utilisés, on peut les exclure tant que tout ceux à droite ne sont pas utilisés.
+Dans le cas où la fonction possède des paramètres non-utilisés, on peut les exclurent tant que tout ceux à droite ne sont pas utilisés.
 
 Exemple:
 ```js
@@ -364,7 +364,7 @@ function getParams (a, b, c, d) {
 
 #### Fonctions raccourcies
 
-Aussi appelé *arrow functions*, celle-ci permettent de simplifier la création de fonction, car oui encore, les développeurs sont feignants.
+Aussi appelées *arrow functions*, celles-ci permettent de simplifier la création de fonction, car oui encore, les développeurs sont feignants.
 
 Ainsi, au lieu d'écrire :
 ```js
@@ -381,12 +381,12 @@ const bonjour = (name) => {
 };
 ```
 
-Et si la fonction contient qu' une seule ligne de code, nous pouvons simplifier encore plus !
+Et si la fonction contient qu'une seule ligne de code, nous pouvons simplifier encore plus !
 ```js
 const bonjour = (name) => "Coucou " + name;
 ```
 
-> **Note:** Il ne faut pas ajouter de crochets autour de la chaine de caractère, sinon la fonction ne retournera pas la valeur.
+> **Note:** Il ne faut pas ajouter de crochets autour de la chaîne de caractère, sinon la fonction ne retournera pas la valeur.
 
 #### Functions anonymes
 
@@ -422,11 +422,11 @@ Et ainsi en:
 ---
 
 
-## Boucle for
+## La boucle for
 
-L'instruction **for** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
+L'instruction `for` crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
 
-L'instruction **for** qui suit débute en déclarant la variable **i** et en l'initialisant à 0. Elle vérifie que **i** est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente **i** de 1, ce qui sera fait à chaque passage dans la boucle.
+L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente i` de 1, ce qui sera fait à chaque passage dans la boucle.
 
 ```js
 for (let i = 0; i < 9; i++) {

@@ -26,7 +26,7 @@ Ici, nous allons voir chacune des fonctionnalités essentielles des tableaux, à
 - `.filter()` - Filtrer les éléments du tableau
 - `.forEach()` - Faire une action sur chaque élément du tableau
 - `.find()` - Récupérer un élément du tableau
-- `.findIndex()` - Récupérer la position un élément du tableau
+- `.findIndex()` - Récupérer la position d'un élément du tableau
 - `.concat()` - Permet de retourner un nouveau tableau en additionnant des tableaux entre eux
 - `.reduce()` - Permet d'accumuler des résultats en fonction du tableau
 
@@ -39,9 +39,9 @@ myTable.indexOf; // <- Function
 myTable.forEach; // <- Function
 ```
 
-### Enchainer les opérations
+### Enchaîner les opérations
 
-Puisque ces appels sont disponibles sur tous les tableaux, si une fonction retourne un tableau il est possible d'enchainer ces méthodes.
+Puisque ces appels sont disponibles sur tous les tableaux, si une fonction retourne un tableau il est possible d'enchaîner ces méthodes.
 
 ```js
 const myTable = [7,8,9];
@@ -119,7 +119,7 @@ if (position === -1) {
 Permet de:
 
 - Supprimer des éléments d'un tableau.
-- Insérrer des éléments à un tableau.
+- Insérer des éléments à un tableau.
 - Les deux à la fois !
 
 Il prend 3 paramètres :
@@ -166,7 +166,7 @@ result; // <- ["chat", "poussin"]
 
 # [].sort()
 
-Permet d'ordonner un tableau, il est possible d'ajouter sa propre fonction pour choisir l'algorythme utilisé, dans ce cas ci, 2 paramètres sont donnés :
+Permet d'ordonner un tableau, il est possible d'ajouter sa propre fonction pour choisir l'algorithme utilisé, dans ce cas ci, 2 paramètres sont donnés :
 - `a` qui correspond au premier élément à comparer
 - `b` qui correspond au second élément à comparer
 
@@ -181,7 +181,7 @@ list.sort();
 list; // <- [2, 232, 7, 89]
 ```
 
-Exemple avec notre propre algorythme :
+Exemple avec notre propre algorithme :
 
 ```js
 const list = [7, 89, 232, 2];
@@ -211,7 +211,7 @@ list; // <- [{ name: "Anna"}, { name: "John"}, { name: "Vince" }];
 
 # [].map()
 
-Permet de retourner un nouveau tableau à partir d'élement calculer du premier.
+Permet de retourner un nouveau tableau à partir d'éléments calculés du premier.
 
 Prend comme paramètre une fonction avec 3 paramètres:`
 
@@ -227,7 +227,7 @@ list; // -> [5, 6, 7, 8]
 result; // -> [10, 12, 14, 16]
 ```
 
-Cette fonction est souvent utilisée pour retournée des sous-objets:
+Cette fonction est souvent utilisée pour retourner des sous-objets:
 ```js
 const list = [{ name: "Vince"}, { name: "Anna"}];
 const result = list.map(element => element.name);
@@ -239,7 +239,7 @@ result; // -> ["Vince", "Anna"]
 
 # [].filter()
 
-Permet de retourner un nouveau tableau contenant uniquement les éléments passant le filtre du premier.
+Permet de retourner un nouveau tableau contenant uniquement les éléments passants le filtre du premier.
 
 Prend comme paramètre une fonction avec 3 paramètres:`
 
@@ -255,7 +255,7 @@ list; // -> [5, 6, 7, 8]
 result; // -> [7, 8]
 ```
 
-Cette fonction est souvent utilisée pour retournée des sous-objets:
+Cette fonction est souvent utilisée pour retourner des sous-objets:
 ```js
 const list = [{ name: "Vince"}, { name: "Anna"}, { name:"John" }];
 const result = list.filter(element => element.name !== "John");
@@ -267,7 +267,7 @@ result; // -> ["Vince", "Anna"]
 
 # [].forEach()
 
-Permet de parcourir un tableau afin d'effectuer des actions
+Permet de parcourir un tableau afin d'effectuer des actions.
 
 Prend comme paramètre une fonction avec 3 paramètres:`
 
@@ -290,7 +290,7 @@ list.forEach(element => {
 # [].find()
 
 Permet de chercher et de retourner un élément du tableau.
-Uniquement le premier élément trouvé sera retourné. Si aucun élément n'est trouvé, renverra `undefined`.
+Uniquement le premier élément trouvé sera retourné. Si aucun élément n'est trouvé, cela renverra `undefined`.
 
 Prend comme paramètre une fonction avec 3 paramètres:`
 
@@ -312,7 +312,7 @@ if (user) {
 # [].findIndex()
 
 Permet de chercher et de retourner la position d'un élément du tableau.
-Uniquement la position du premier élément trouvé sera retournée. Si aucun élément n'est trouvé, renverra `-1`.
+Uniquement la position du premier élément trouvé sera retournée. Si aucun élément n'est trouvé, cela renverra `-1`.
 
 Prend comme paramètre une fonction avec 3 paramètres:`
 
@@ -360,11 +360,11 @@ list3 // <- ["chien", "chat", "poussin", "canard", "licorne"];
 
 # [].reduce()
 
-Permet d'accumuler une valeur à partir des résultats de notre function.
+Permet d'accumuler une valeur à partir des résultats de notre fonction.
 
 Prend comme paramètre une fonction avec 4 paramètres ainsi que la valeur par défaut de l'accumulateur:
 
-- `accumulator` - Valeur de l'accumulator
+- `accumulator` - Valeur de l'accumulateur
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
 - `array` - Le tableau
