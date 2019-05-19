@@ -388,7 +388,7 @@ const bonjour = (name) => "Coucou " + name;
 
 > **Note:** Il ne faut pas ajouter de crochets autour de la chaîne de caractère, sinon la fonction ne retournera pas la valeur.
 
-#### Functions anonymes
+#### Fonctions anonymes
 
 ![](https://www.erenumerique.fr/wp-content/uploads/2016/02/Les-Anonymous.jpg)
 
@@ -426,7 +426,7 @@ Et ainsi en:
 
 L'instruction `for` crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
 
-L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente i` de 1, ce qui sera fait à chaque passage dans la boucle.
+L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
 
 ```js
 for (let i = 0; i < 9; i++) {
@@ -436,3 +436,63 @@ for (let i = 0; i < 9; i++) {
 
 
 ---
+
+
+## La boucle for...in
+
+L'instruction `for...in` permet d'itérer sur les **propriétés énumérables** d'un objet qui ne sont pas des **symboles**. Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un *bloc* d'instructions).
+
+### Description
+
+Une boucle `for...in` ne parcourt pas les propriétés qui ne sont pas énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes `indexOf()` du type `String` ou `toString` depuis `Object`. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
+
+> Note : `for...in` ne doit pas être utilisé pour parcourir un Array, lorque l'ordre des éléments est important.
+
+```js
+const object = {a:1, b:2, c:3};
+    
+for (let property in object) {
+  console.log(`object.${property} = ${object[property]}`);
+}
+```
+
+
+---
+
+
+## La boucle for...of
+
+L'instruction `for...of` permet de créer une boucle Array qui parcourt un objet itérable (ce qui inclut les objets `Array`, `Map`, `Set`, `String`, `TypedArray`, l'objet `arguments`, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
+
+```js
+let tableauItérable = [1, 2, 3];
+
+for (let valeur of tableauItérable) {
+  console.log(valeur);
+}
+```
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
