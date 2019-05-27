@@ -1,6 +1,5 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
-import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import list from './hostels';
 
@@ -8,7 +7,39 @@ import list from './hostels';
 admin.initializeApp();
 
 const app = express();
-app.use(bodyParser.json());
+
+app.set('views engine', 'pug');
+
+
+app.get('/', function (req, res) {
+    res.render('index.pug', {
+        title: 'CV Anna',
+        firstName: 'Anna',
+        lastName: 'Vessereau',
+        introduction: 'A propos',
+        description: 'Je suis une grande aventurière dans l\'âme, j\'aime les challenges et les défis, ce qui me pousse à dépasser mes limites! A la recherche de renouveau et ayant une bonne capacité d\'adaptation, j\'aime découvrir et apprendre de nouvelles choses afin de maintenir mon cerveau en éveil et pouvoir ainsi partager mes connaissances si nécessaire!',
+        contact: 'Contact',
+        phone: 'Téléphone',
+        number: '0673855635',
+        email: 'Email',
+        mail: 'anna.vessereau@gmail.com',
+        address: 'Adresse',
+        location: '17 rue Ferdinand Buisson',
+        zipCode: '92110',
+        city: 'Clichy',
+        experiences: 'Expériences',
+        date: '2015-2018',
+        job: 'Conseillère de vente en maroquinerie',
+        brand: 'Michael Kors',
+        position: 'BHV Marais, Galeries Lafayette',
+        formation: 'Formation',
+        year: '2015',
+        formationName: 'Formation Anglais professionnel du Tourisme et TOEIC',
+        area: 'CFC, Arles',
+        likes: 'Ce que j\'aime',
+
+    });
+});
 
 
 app.get('/list', (req, res) => {

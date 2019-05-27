@@ -1,0 +1,47 @@
+html
+    head
+        title #{title}
+    body
+        header
+            h1 #{firstName} #{lastName}
+        main
+            aside
+                section.block
+                    article
+                    h2 #{introduction}
+                    p #{description}
+                    hr
+                    h2 #{contact}
+                    h4 #{phone}
+                    p #{number}
+                    h4 #{email}
+                    p #{mail}
+                    h4 #{address}
+                    p #{location}
+                    p #{zipCode} #{city}
+                    hr
+            section.block-main
+                h2 #{experiences}
+                p #{date}
+                p #{job}
+                p #{brand}
+                p #{position}
+                hr
+                h2 #{formation}
+                p #{year}
+                p #{formationName}
+                p #{area}
+                hr
+                h2 #{likes}
+                -
+                    const list = [ "Photos", "Musique", "Chocolat", "Chats", "Disney", "Paillettes" ]
+                each item in list
+                    li= item
+
+
+
+
+
+
+
+
