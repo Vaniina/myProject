@@ -20,7 +20,7 @@ Cette documentation va reprendre les bases, à savoir :
 Pour commencer, il faut savoir qu'en javascript il y a différents types de données.
 Celles-ci permettent de stocker les différentes structures et gagner en confort.
 
-On peut dès à présent en citer les principales:
+On peut dès à présent en citer les principales :
 
 - [Boolean](#boolean)
 - [String](#string)
@@ -28,15 +28,15 @@ On peut dès à présent en citer les principales:
 - [Object](#object)
 - [Array](#array)
 
-Il est important de noter que chacun de ces types a son propre intérêt et ils peuvent donner accès à différentes méthodes internes.
+Il est important de noter que chacun de ces types a son propre intérêt, et ils peuvent donner accès à différentes méthodes internes.
 
 #### Boolean
 
-Un boolean est représenté par `true` ou `false`, ils permettent de dire si quelque chose a un état spécifique.
+Un boolean est représenté par `true` ou `false`, il permet de dire si quelque chose a un état spécifique.
 Par exemple, spécifier si une fonctionnalité est active.
 
 
-Il y a différentes façon de générer un boolean, une liste non exhaustive:
+Il y a différentes façon de générer un boolean, une liste non exhaustive :
 
 ```js
 // En dure
@@ -54,7 +54,7 @@ const IS_DEV_MODE = !!location.hash; // version "racourcie" du dessus.
 #### String
 
 Les strings, ou _chaines de caractères_, permettent de stocker des caractères ou du texte.
-Il existe différentes façon d'écrire du texte:
+Il existe différentes façon d'écrire du texte :
 
 ```js
 const monTexte = "Coucou toi";
@@ -71,7 +71,7 @@ const result = monTexte.trim();
 result; // <- 'Coucou'
 ```
 
-Il est possible d'accéder individuellement à des caractères de ce texte, en utilisant les propriétés des tableaux.
+Il est possible d'accéder individuellement à des caractères de ce texte, en utilisant les propriétés des tableaux :
 
 ```js
 const monTexte = "Coucou toi";
@@ -89,14 +89,14 @@ Il est également possible d'assembler différents textes ensembles via l'opéra
 const monTexte1 = "Coucou toi, ";
 const monTexte2 = "Tu vas bien";
 
-const result = monTexte1 + monTexte2 + " ?";
+const result = monTexte1 + monTexte2 + " ? ";
 
 result; // <- 'Coucou toi, Tu vas bien ?'
 ```
 
 #### Number
 
-Les nombres, permettent essentiellement à faire des calculs: addition, soustraction, multiplication, ...
+Les nombres, permettent essentiellement à faire des calculs : addition, soustraction, multiplication, ...
 
 ```js
 const count = 22;
@@ -169,14 +169,14 @@ children[2]; // <- "Vince"
 children[3]; // <- undefined
 ```
 
-La force des array, est de pouvoir manipuler des listes, enlever/ajouter des éléments, les classer par rapport à un filtre et pas mal d'autres informations.
+La force des `array`, est de pouvoir manipuler des listes, enlever/ajouter des éléments, les classer par rapport à un filtre et pas mal d'autres informations.
 Nous noterons les fonctionnalités principales : `.length`, `.push()`, `.indexOf`, `.splice()`, `.sort()`, `.map()`, `.join()`, `.find()`, `.findIndex()`, `.filter()`, `.forEach()`.
 
 ---
 
 ## Les opérateurs
 
-Les différents opérateurs mathématiques sont disponibles pour effectuer des calcules plus ou moins complexes :
+Les différents opérateurs mathématiques sont disponibles pour effectuer des calculs plus ou moins complexes :
 
 - `+` Additioner des nombres, **ou assembler des strings ensembles**.
 - `-` Soustraction de nombres.
@@ -192,12 +192,12 @@ Les différents opérateurs mathématiques sont disponibles pour effectuer des c
 Les opérateurs de comparaison permettent d'éxecuter du code dans un cas précis.
 Ils sont souvent utilisés dans les conditions `if()` ou dans des fonctions pour trouver des éléments, par exemple: `array.find()`, `array.filter()`
 
-- `a === b` Est égale.
-- `a !== b` N'est pas égale.
+- `a === b` Est égal.
+- `a !== b` N'est pas égal.
 - `a < b` Est plus petit que.
-- `a <= b` Est plus petit ou égale à.
-- `a > b` Est plus grand ou égale à.
-- `a >= b` Est plus grand ou égale à.
+- `a <= b` Est plus petit ou égal à.
+- `a > b` Est plus grand ou égal à.
+- `a >= b` Est plus grand ou égal à.
 
 Il est possible d'effectuer de multiples comparaisons à la suite, via les opérateurs suivants :
 
@@ -213,7 +213,7 @@ if (name === "John" && age > 30) {
 }
 ```
 
-Il existe aussi l'opérateur ternaire qui permet de faire des conditions sur une seule ligne:
+Il existe aussi l'opérateur ternaire qui permet de faire des conditions sur une seule ligne :
 
 ```js
 const message = (sexe === "male") ? "Une bière ?" : "Un rosé ?";
@@ -263,7 +263,7 @@ user; // <- "Maître du monde"
 
 #### Portée de la variable
 
-Le type de variable `let` et `const`, n'existe que dans le bloc d'accolade `{}` dans lequel ils se situent.
+Les types de variables `let` et `const`, n'existent que dans le bloc d'accolade `{}` dans lequel elles se situent.
 
 ```js
 const user = "John"; // globale
@@ -329,11 +329,11 @@ bonjour("Anna"); // <- "Coucou Anna"
 
 #### Envoie de plusieurs paramètres
 
-Si l'on souhaite envoyer plusieurs paramètres à la fonction, il suffit d'ajouter dans les parenthèses la liste des variables qu'on souhaite envoyer, séparés par des virgules.
+Si l'on souhaite envoyer plusieurs paramètres à la fonction, il suffit d'ajouter dans les parenthèses la liste des variables que l'on souhaite envoyer, séparées par des virgules.
 
 ```js
 function bonjour (name, age) { // <- 2 paramètres appelés 'name' et 'age'
-    return "Coucou " + name + ", tu as " + age + " ans";
+    return "Coucou " + name + ", tu as " + age + " ans ";
 }
 ```
 
@@ -355,7 +355,7 @@ function getParams (a, b, c, d, e, f) {
     return d + 5;
 }
 
-// Seul d'd est utilisé, on peut enlever tout ceux à droite.
+// Seul d est utilisé, on peut enlever tout ceux à droite.
 function getParams (a, b, c, d) {
     return d + 5;
 }
@@ -392,9 +392,9 @@ const bonjour = (name) => "Coucou " + name;
 
 ![](https://www.erenumerique.fr/wp-content/uploads/2016/02/Les-Anonymous.jpg)
 
-Dans certains cas, lorsque l'on envoie une fonction en paramètre à une fonction par exemple, il n'est pas nécessaire de donner un nom à celle-ci.
+Dans certains cas, lorsque l'on envoie une fonction en paramètre à une autre fonction par exemple, il n'est pas nécessaire de donner un nom à celle-ci.
 
-Ainsi, le code suivant:
+Ainsi, le code suivant :
 
 ```js
 [7,12,15]
@@ -403,7 +403,7 @@ Ainsi, le code suivant:
     });
 ```
 
-Peut être transformé en:
+Peut être transformé en :
 ```js
 [7,12,15]
     .filter(function (element) {
@@ -411,7 +411,7 @@ Peut être transformé en:
     });
 ```
 
-Et ainsi en:
+Et ainsi en :
 
 ```js
 [7,12,15]
@@ -424,7 +424,7 @@ Et ainsi en:
 
 ## La boucle for
 
-L'instruction `for` crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
+L'instruction `for` crée une boucle composée de trois expressions optionnelles séparées par des points-virgules, et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une *instruction de bloc*) à exécuter dans la boucle.
 
 L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
 

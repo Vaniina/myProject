@@ -18,7 +18,7 @@ Ici, nous allons voir chacune des fonctionnalités essentielles des tableaux, à
 
 - `.length` - Récupérer la taille du tableau
 - `.push()` - Ajouter un élément à la fin du tableau
-- `.indexOf()` - Récupérer la position du élément
+- `.indexOf()` - Récupérer la position de l'élément
 - `.splice()` - Enlever un élément du tableau
 - `.slice()` - Récupérer une partie du tableau
 - `.sort()` - Classer le tableau
@@ -30,7 +30,7 @@ Ici, nous allons voir chacune des fonctionnalités essentielles des tableaux, à
 - `.concat()` - Permet de retourner un nouveau tableau en additionnant des tableaux entre eux
 - `.reduce()` - Permet d'accumuler des résultats en fonction du tableau
 
-Toutes ces fonctionalités sont disponibles à partir d'un tableau, il suffit d'ajouter le code après la référence du tableau.
+Toutes ces fonctionnalités sont disponibles à partir d'un tableau, il suffit d'ajouter le code après la référence du tableau.
 
 ```js
 const myTable = [7,8,9];
@@ -60,7 +60,7 @@ myTable
 
 # [].length
 
-Permet de retourner, ou modifier la taille d'un tableau
+Permet de retourner, ou modifier la taille d'un tableau.
 
 ```js
 const list = [7, 8, 9, 10];
@@ -78,7 +78,7 @@ console.log(list); // Affiche [7, 8, 9]
 
 # [].push()
 
-Permet d'ajouter un ou plusieurs éléments à la fin du tableau
+Permet d'ajouter un ou plusieurs éléments à la fin du tableau.
 
 ```js
 const list = [7, 8, 9, 10];
@@ -125,7 +125,7 @@ Permet de:
 Il prend 3 paramètres :
 
 - `start` La position où l'on commence à supprimer ou insérer.
-- `deleteCount` Combien d'items on supprime (si on spécifié: `0`).
+- `deleteCount` Combien d'items on supprime (si on spécifie: `0`).
 - `...items` Les éléments à insérer (optionnel)
 
 Supprimer des éléments :
@@ -137,7 +137,7 @@ list.splice(1, 2); // On supprime à partir du "chat" 2 éléments, donc le chat
 list; // <- ["chien", "poussin"]
 ```
 
-Insertions d'éléments:
+Insertions d'éléments :
 ```js
 const list = ["chien", "chat", "cheval", "poussin"];
 list.splice(1, 0, "licorne", "crocodile"); // A l'index 1 (chat), on ne supprime aucun élément mais on ajoute "licorne" et "crocodile"
@@ -166,7 +166,7 @@ result; // <- ["chat", "poussin"]
 
 # [].sort()
 
-Permet d'ordonner un tableau, il est possible d'ajouter sa propre fonction pour choisir l'algorithme utilisé, dans ce cas ci, 2 paramètres sont donnés :
+Permet d'ordonner un tableau, il est possible d'ajouter sa propre fonction pour choisir l'algorithme utilisé, dans ce cas-ci, 2 paramètres sont donnés :
 - `a` qui correspond au premier élément à comparer
 - `b` qui correspond au second élément à comparer
 
@@ -190,7 +190,7 @@ list.sort((a, b) => b - a);
 list; // <- [232, 89, 7, 2]
 ```
 
-Exemple de comparaison de string dans un sous-objet:
+Exemple de comparaison de string dans un sous-objet :
 
 ```js
 const list = [{ name: "Vince"}, { name: "Anna"}, { name: "John" }];
@@ -213,7 +213,7 @@ list; // <- [{ name: "Anna"}, { name: "John"}, { name: "Vince" }];
 
 Permet de retourner un nouveau tableau à partir d'éléments calculés du premier.
 
-Prend comme paramètre une fonction avec 3 paramètres:`
+Prend comme paramètre une fonction avec 3 paramètres :
 
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
@@ -227,7 +227,7 @@ list; // -> [5, 6, 7, 8]
 result; // -> [10, 12, 14, 16]
 ```
 
-Cette fonction est souvent utilisée pour retourner des sous-objets:
+Cette fonction est souvent utilisée pour retourner des sous-objets :
 ```js
 const list = [{ name: "Vince"}, { name: "Anna"}];
 const result = list.map(element => element.name);
@@ -241,7 +241,7 @@ result; // -> ["Vince", "Anna"]
 
 Permet de retourner un nouveau tableau contenant uniquement les éléments passants le filtre du premier.
 
-Prend comme paramètre une fonction avec 3 paramètres:`
+Prend comme paramètre une fonction avec 3 paramètres :
 
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
@@ -255,7 +255,7 @@ list; // -> [5, 6, 7, 8]
 result; // -> [7, 8]
 ```
 
-Cette fonction est souvent utilisée pour retourner des sous-objets:
+Cette fonction est souvent utilisée pour retourner des sous-objets :
 ```js
 const list = [{ name: "Vince"}, { name: "Anna"}, { name:"John" }];
 const result = list.filter(element => element.name !== "John");
@@ -269,7 +269,7 @@ result; // -> ["Vince", "Anna"]
 
 Permet de parcourir un tableau afin d'effectuer des actions.
 
-Prend comme paramètre une fonction avec 3 paramètres:`
+Prend comme paramètre une fonction avec 3 paramètres :
 
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
@@ -283,7 +283,6 @@ list.forEach(element => {
 });
 ```
 
-...
 
 ---
 
@@ -292,7 +291,7 @@ list.forEach(element => {
 Permet de chercher et de retourner un élément du tableau.
 Uniquement le premier élément trouvé sera retourné. Si aucun élément n'est trouvé, cela renverra `undefined`.
 
-Prend comme paramètre une fonction avec 3 paramètres:`
+Prend comme paramètre une fonction avec 3 paramètres :
 
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
@@ -314,7 +313,7 @@ if (user) {
 Permet de chercher et de retourner la position d'un élément du tableau.
 Uniquement la position du premier élément trouvé sera retournée. Si aucun élément n'est trouvé, cela renverra `-1`.
 
-Prend comme paramètre une fonction avec 3 paramètres:`
+Prend comme paramètre une fonction avec 3 paramètres :
 
 - `element` - L'élément du tableau
 - `index` - La position dans le tableau
@@ -337,7 +336,7 @@ if (index !== -1) {
 
 Permet de générer un nouveau tableau en en additionnant plusieurs.
 
-Exemple:
+Exemple :
 ```js
 const list1 = ["chien", "chat"];
 const list2 = ["poussin", "canard", "licorne"];
@@ -362,7 +361,7 @@ list3 // <- ["chien", "chat", "poussin", "canard", "licorne"];
 
 Permet d'accumuler une valeur à partir des résultats de notre fonction.
 
-Prend comme paramètre une fonction avec 4 paramètres ainsi que la valeur par défaut de l'accumulateur:
+Prend comme paramètre une fonction avec 4 paramètres, ainsi que la valeur par défaut de l'accumulateur :
 
 - `accumulator` - Valeur de l'accumulateur
 - `element` - L'élément du tableau
@@ -371,7 +370,7 @@ Prend comme paramètre une fonction avec 4 paramètres ainsi que la valeur par d
 
 > **Note:** Il est important de ne pas oublier de retourner la nouvelle valeur de l'accumulateur !
 
-Il peut être utilisé pour calculer des totaux:
+Il peut être utilisé pour calculer des totaux :
 ```js
 const list = [33, 22, 12];
 const total = list.reduce((count, element) => count + element, 0);
@@ -379,7 +378,7 @@ const total = list.reduce((count, element) => count + element, 0);
 total; //  <- 67
 ```
 
-Pour merger des tableaux:
+Pour merger des tableaux :
 ```js
 const list = [
     ["chat", "chien"],
@@ -393,7 +392,7 @@ list.reduce((accumulator, element) => {
 list; // <- ["chat", "chien", "cheval", "poussin"]
 ```
 
-Ou bien pour construire des objets dynamiquements:
+Ou bien pour construire des objets dynamiquement :
 ```js
 const list = ["chat", "chien", "cheval"];
 
